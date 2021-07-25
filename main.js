@@ -1,4 +1,4 @@
-const discordToken = 'ODU3NTQ4NzE0MDI5ODc1MjEx.YNRMeQ.zF58I_6q2It4rc7D815hIMh9i44';
+const discordToken = 'ODU3NTQ4NzE0MDI5ODc1MjEx.YNRMeQ.8cjzrhR0fCGikw04ZxkMYtJ_vO0';
 const tapeCarID = '857562855694663701';
 const engineID = '857319136749289522';
 const momID = '868931989418430526';
