@@ -1,0 +1,454 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Model Infinity Train Set</title>
+    <style>
+        /* --------------
+            VARIABLES
+        -------------- */
+        :root {
+            --main: #25e267;
+            --lgray: #f6f6f6;
+            --gray: #36393f;
+        }
+
+        /* -----------
+            COLORS
+        ----------- */
+
+        .wText {
+            color: white;
+        }
+
+        .lgText {
+            background: var(--lgray);
+            color: var(--gray) !important;
+        }
+
+        .pText {
+            color: #70ffa3;
+        }
+
+        .dText {
+            color: #ffbf70;
+        }
+
+        .dBack {
+            background: #ff991c;
+        }
+
+        .cText {
+            color: #8a93ff;
+        }
+
+        .tText {
+            color: #fbc7ff;
+        }
+
+        .pcText {
+            color: #ff7979;
+        }
+
+        .sText {
+            color: #50faff;
+        }
+
+        .discord {
+            background: #5865F2;
+        }
+
+        .kickstarter {
+            background: #05ce78;
+        }
+
+        .gmail {
+            background: #f14236;
+        }
+
+        .youtube {
+            background: #ff0000;
+        }
+
+        /* ----------------
+            TEXT STYLES
+        ---------------- */
+
+        .infobox,
+        .discordText {
+            background: var(--gray);
+        }
+
+        td a,
+        .logo {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /*Round Rectangle*/
+        .infobox,
+        .textbox,
+        .discordText,
+        .logo {
+            padding: 2px 5px;
+            border-radius: 6px;
+            font-size: 13.5px;
+            white-space: nowrap;
+        }
+
+        /* ------------
+            BUTTONS
+        ------------ */
+        .btn {
+            width: fit-content;
+            border-radius: 14px;
+            padding: 10px 15px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .btn a {
+            color: inherit;
+            font-size: 14pt;
+            text-decoration: none;
+        }
+
+        /* -------------
+            ON HOVER
+        ------------- */
+
+        .btn:hover,
+        .socials a:hover {
+            color: black;
+            background: white;
+        }
+
+        p a:hover {
+            color: white;
+            background: var(--gray);
+        }
+
+        .footer p a:hover {
+            color: inherit;
+            background: inherit;
+        }
+
+        /* ----------------------
+            GRAPHICS & LAYOUT
+        ---------------------- */
+
+        .header {
+            background-image: url('./emailBanner.png');
+            background-size: cover;
+            width: 560px;
+            height: 105.234px;
+        }
+
+        .socials {
+            float: right;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .socials li {
+            height: 30px;
+        }
+
+        .infobox {
+            text-align: center;
+            font-size: 18px;
+            line-height: 25px;
+            width: fit-content;
+            margin: auto;
+            padding: 18px 12px;
+        }
+
+        .textbox {
+            background: white;
+            font-size: 14px;
+            width: 220px;
+            padding: 4px 0px;
+            margin: 5px auto;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background: white;
+            border-radius: 3px;
+            margin: 20px auto;
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 560px;
+        }
+
+        .main {
+            padding: 10px 20px;
+        }
+
+        .footer {
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+            color: #999999;
+            font-size: 12px;
+        }
+
+        .footer p a {
+            color: inherit;
+        }
+
+        /* -------------
+            ELEMENTS
+        ------------- */
+
+        body {
+            background: var(--lgray);
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ol {
+            padding-left: 60px;
+            margin: 0;
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        p,
+        ul {
+            margin-bottom: 10px;
+            line-height: 20px;
+        }
+
+        p a {
+            text-decoration: underline !important;
+        }
+
+        table {
+            table-layout: fixed;
+            width: 867.594px;
+            text-align: center;
+        }
+
+        td {
+            width: 289.198px;
+        }
+        td a {
+            font-size: 40px;
+        }
+
+        /* ---------------------------
+            MOBILE FRIENDLY STYLES
+        --------------------------- */
+        #content-mobile {
+            display: none;
+        }
+
+        @media only screen and (min-width: 976px) and (max-width: 1000px) {
+            #content-desktop {
+                display: none;
+            }
+
+            #content-mobile {
+                display: block;
+                padding: 10px;
+                padding-top: 0;
+            }
+
+            p {
+                line-height: 35px;
+                font-size: 15px !important;
+                margin-bottom: 40px;
+            }
+
+            .btn a,
+            .textbox,
+            .infobox {
+                font-size: 43px;
+            }
+
+            .infobox {
+                line-height: 52px;
+                width: 80%;
+                padding: 30px 0 !important;
+            }
+
+            .textbox {
+                width: 90%;
+            }
+
+            .content {
+                max-width: none;
+                width: 90%;
+                margin: auto auto;
+            }
+
+            .header {
+                width: 867.594px;
+                height: 163.036px;
+            }
+
+            .infobox,
+            .textbox,
+            .discordText,
+            .logo {
+                padding: 2px 10px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div style="background: #552a20;">
+            <div class="header">
+                <ul class="socials" id="content-desktop">
+                    <li><a class="logo kickstarter"
+                            href="https://www.kickstarter.com/projects/sskki/toy-infinity-train-set">Kickstarter</a>
+                    </li>
+                    <li><a class="logo gmail" href="mailto:Steward.MITP@gmail.com">G Mail</a></li>
+                    <li><a class="logo discord" href="https://discord.gg/t9eA2NYPKR">Discord</a></li>
+                </ul>
+            </div>
+            <table id="content-mobile">
+                <tr>
+                    <td class="logo kickstarter">
+                        <a href="https://www.kickstarter.com/projects/sskki/toy-infinity-train-set">Kickstarter</a>
+                    </td>
+                    <td class="logo gmail">
+                        <a href="mailto:Steward.MITP@gmail.com">G Mail</a>
+                    </td>
+                    <td class="logo discord">
+                        <a href="https://discord.gg/t9eA2NYPKR">Discord</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="main">
+            <p>
+                Hello <span class="pText discordText">Harry Choi</span>!
+            </p>
+            <p>
+                I'm <span class="sText discordText">The Steward</span>, an email and Discord bot written by
+                <span class="pcText discordText">The Project Creator</span><br>Harry "sskki" Choi.
+            </p>
+            <p>
+                First of all, thank you for backing the
+                <a class="logo kickstarter"
+                    href="https://www.kickstarter.com/projects/sskki/toy-infinity-train-set">Model Infinity Train Set
+                    Kickstarter</a>!
+            </p>
+            <p>
+                Over the 30 day campaign, a total of
+                <b>36 backers</b>
+                raised a total of
+                <b>$6863.32 AUD</b>!
+                This money will fund the creation of:
+            </p>
+            <div>
+                <ul class="infobox">
+                    <li><span class="pText">85 Infinity Train Cars</span></li>
+                    <li><span class="cText">27 Infinity Train Engines</span></li>
+                    <li><span class="dText">49 Posters</span></li>
+                </ul>
+            </div>
+            <p>
+                The <span class="logo dBack">Digital Poster</span> of all the wonderful car titles is attached to this
+                email and what an interesting range of titles!<br>
+                A lot of trouble was undergone working with freelance artists to get it just right so I hope that you
+                love the design as much as I do.<br>
+                And while it won't be enforced, please remember that your fellow backers have paid for its commission so
+                don't share it with non-backers.
+            </p>
+            <p>
+                To join the <span class="logo discord">Project Discord</span>, where backers can get updates, watch the
+                build process and give feedback:
+                <ol>
+                    <li>Copy the <span class="logo lgText">Verification Code</span> below by clicking on it</li>
+                    <li>Click the <span class="logo discord">Join The Discord</span> button below then <span
+                            class="logo discord">Accept Invite</span></li>
+                    <li>Please read what's posted in the <span class="discordText wText">🚪-welcome-and-rules</span>
+                        channel</li>
+                    <li>Paste and send your <span class="logo lgText">Verification Code</span> in the <span
+                            class="discordText wText">📼-tape-car</span> channel</li>
+                    <li>I, <span class="sText discordText">The Steward</span>, will be checking the <span
+                            class="discordText wText">📼-tape-car</span> daily to accept your codes and grant you access
+                        to the other channels in the server<br>
+                        This may take up to 24 hours, so please be patient</li>
+                </ol>
+            </p>
+            <div class="infobox" align="center">
+                <div class="wText">Your Verification Code:</div>
+                <div class="textbox">
+                    <a onclick="copyToClipboard(this)">MMMMMMMMMMMMMMMM</a>
+                </div>
+                <div class="btn discord">
+                    <a href="https://discord.gg/t9eA2NYPKR">Join The Discord</a>
+                </div>
+            </div>
+            <p>
+                <b>Never used Discord before?</b> <a class="logo youtube"
+                    href="https://www.youtube.com/watch?v=TJ13BA3-NR4">This YouTube video</a>
+                gives a brief introduction to how Discord works. If you are still having troubles, please reply to
+                <b>this email</b>.
+            </p>
+            <p>
+                Finally, if you want to contact <span class="pcText discordText">The Project Creator</span>, the
+                preferred method of contact is either through the <span class="logo discord">Project Discord</span> or
+                through <b>Steward.MITP@gmail.com</b> (you can reply to this email).<br>
+                Replies to emails may come from <b>nameisharrychoi@gmail.com</b> but sending emails regarding the
+                project to <b>Steward.MITP@gmail.com</b> is preferred.<br>
+                <span class="logo kickstarter">Kickstarter</span> messages and comments
+                will also be checked</span> from time to time, but not as frequently.
+            </p>
+            <p>
+                Once again, this project would not have been possible without your support! All efforts will be put into
+                delivering your rewards as quickly as possible.
+            </p>
+            <p>
+                Many thanks, <br>
+                from <span class="sText discordText">The Steward</span> and <span class="pcText discordText">The Project
+                    Creator</span>.
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Sskki's Model Infinity Train Kickstarter, 2021<br>
+            Follow me!
+            &nbsp;
+            <a href="https://twitter.com/the_real_sskki">Twitter</a>
+            &nbsp;
+            <a href="https://sskki.tumblr.com/">Tumblr</a>
+        </p>
+    </div>
+    <script>
+        function copyToClipboard(e) {
+            var ic = document.body.appendChild(document.createElement("input"));
+            if (e.value == undefined) {
+                e.value = e.text;
+            }
+            ic.value = e.value;
+            ic.focus();
+            ic.select();
+            document.execCommand('copy');
+            ic.parentNode.removeChild(ic);
+            e.innerHTML = "Copied!";
+            setTimeout(function () {
+                e.innerHTML = e.value;
+            }, 1500);
+        }
+    </script>
+</body>
+
+</html>
