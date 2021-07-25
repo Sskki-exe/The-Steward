@@ -1,25 +1,23 @@
-const discordToken = 'ODU3NTQ4NzE0MDI5ODc1MjEx.YNRMeQ.8cjzrhR0fCGikw04ZxkMYtJ_vO0';
-const tapeCarID = '857562855694663701';
-const engineID = '857319136749289522';
-const momID = '868931989418430526';
-
 /**
  * Initialise
  */
 const Discord = require('discord.js'); // Import Discord module
 const client = new Discord.Client(); // Create bot instance
 
-// import commands folder
+// get token
 const fs = require('fs');
+fs.readFile('token.txt', 'utf-8', (err, data) => {
+    if (err) throw err;    
+    client.login(data);// start bot
+})
+
+// import commands folder
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     client.commands.set(command.name, command);
 }
-
-// start bot
-client.login(discordToken);
 
 /**
  * On Ready
@@ -47,7 +45,7 @@ client.on('message', message => {
         command.execute(message, args);
     } else {
         console.log(`${message.author.username}: ${message.content}`);
-        switch (cmd){
+        switch (cmd) {
             case "hello":
             case "hi":
                 message.channel.send("Hello!");
