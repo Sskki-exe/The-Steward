@@ -29,6 +29,7 @@ client.once('ready', () => {
 /**
  * While Running
  */
+const buzz = require('./buzz.js');
 client.on('message', message => {
     // ignore self
     if (message.author.bot) {
@@ -44,11 +45,6 @@ client.on('message', message => {
         console.log(`  ${message.author.username} -${command}: ${args}`);
         command.execute(message, args);
     } else {
-        console.log(`${message.author.username}: ${message.content}`);
-        switch (cmd) {
-            case "hello":
-            case "hi":
-                message.channel.send("Hello!");
-        }
+        buzz.buzz(message);        
     }
 })
