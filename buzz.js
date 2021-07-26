@@ -14,7 +14,7 @@ function buzz(message){
         console.log(word);
         console.log(typeof(word));
         if (Object.keys(buzzes).includes(word.toLowerCase())){
-            message.channel.send(buzzes[word]);
+            message.channel.send(buzzes[word.toLowerCase()]);
         }
     }
 }
