@@ -8,11 +8,11 @@ function buzz(message){
     // import buzzes
     const fs = require('fs');
     let buzzes = JSON.parse(fs.readFileSync('buzz.json'));
-    console.log(buzzes);
-    console.log(typeof(buzzes));
     
     // check if word in buzzes
     for (const word of msg.split(' ')) {
+        console.log(word);
+        console.log(typeof(word));
         if (Object.keys(buzzes).includes(word)){
             message.channel.send(buzzes[word]);
         }
