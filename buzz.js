@@ -13,7 +13,7 @@ function buzz(message){
     for (const word of msg.split(' ')) {
         console.log(word);
         console.log(typeof(word));
-        if (Object.keys(buzzes).includes(word)){
+        if (Object.keys(buzzes).includes(word.toLowerCase())){
             message.channel.send(buzzes[word]);
         }
     }
