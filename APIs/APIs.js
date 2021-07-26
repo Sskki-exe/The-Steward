@@ -139,7 +139,7 @@ async function verify(m) {
     await m.channel.bulkDelete(limit + 1)
         .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
         .catch(console.error);
-    m.channel.send("Collecting Messages");
+    m.channel.send(["Verifying...","Collecting Messages"]);
     console.log(testCodes);
     const tCodes = Object.keys(testCodes);
     // Verify Backers

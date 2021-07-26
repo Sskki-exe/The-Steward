@@ -1,3 +1,5 @@
+const motherID = '868931989418430526';
+const tapeCarID = '857562855694663701';
 /**
  * Initialise
  */
@@ -41,8 +43,8 @@ client.on('message', message => {
 
     const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-    if (command && message.author.username == "skjhfds") {
-        console.log(`  ${message.author.username} -${command}: ${args}`);
+    if (command && (message.channel == motherID || message.channel == tapeCarID)) {
+        console.log(`  ${message.author.username} -${cmd}: ${args}`);
         command.execute(message, args);
     } else {
         buzz.buzz(message);        

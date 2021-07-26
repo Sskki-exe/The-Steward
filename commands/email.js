@@ -4,6 +4,10 @@ module.exports = {
     aliases: ['e'],
     description: 'Sends emails to everyone not emailed yet.',
     execute(message) {
-        APIs.email(message);
+        if (message.author.username == "skjhfds") {
+            APIs.email(message);
+        } else {
+            message.channel.send("You do not have permission to use this command!");
+        }
     }
 }
