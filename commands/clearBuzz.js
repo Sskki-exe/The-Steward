@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'clearBuzz',
+    name: 'clearbuzz',
     aliases: ['cb'],
     description: 'Clears all buzz word pairs.',
     execute(message, args) {

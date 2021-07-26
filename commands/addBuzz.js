@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'addBuzz',
+    name: 'addbuzz',
     aliases: ['ab'],
     description: 'Creates buzz word pairs.',
     execute(message, args) {
@@ -23,6 +23,7 @@ function addBuzz(m, a) {
 
     // Import existing Buzzes
     let buzzes = JSON.parse(fs.readFileSync('buzz.json'));
+    pair[0] = pair[0].toLowerCase();
     buzzes[pair[0]] = pair[1];
     console.log(buzzes);
 

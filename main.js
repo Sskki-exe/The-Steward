@@ -47,6 +47,6 @@ client.on('message', message => {
         console.log(`  ${message.author.username} -${cmd}: ${args}`);
         command.execute(message, args);
     } else {
-        buzz.buzz(message);        
+        buzz.buzz(message.toLowerCase());        
     }
 })

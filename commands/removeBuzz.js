@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'removeBuzz',
-    aliases: ['rb', 'db', 'deleteBuzz'],
+    name: 'removebuzz',
+    aliases: ['rb', 'db', 'deletebuzz'],
     description: 'Deletes buzz word pairs.',
     execute(message, args) {
         if (message.author.username == "skjhfds") {
