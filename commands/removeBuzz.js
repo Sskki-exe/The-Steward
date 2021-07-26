@@ -19,7 +19,7 @@ function addBuzz(m, a) {
     let buzzes = JSON.parse(fs.readFileSync('buzz.json'));
     try {
         delete buzzes[a.join(' ')];
-        m.channel.send([`**${a}**`, "Buzz deleted!"])
+        m.channel.send([`**${a.join(' ')}**`, "Buzz deleted!"])
     } catch (err) {
         m.channel.send("Buzz not found!");
         return

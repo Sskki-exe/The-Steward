@@ -2,7 +2,7 @@ const { testing } = require('googleapis/build/src/apis/testing');
 
 module.exports = {buzz};
 function buzz(message){
-    const msg = message.content;
+    const msg = message.content.toLowerCase();
     console.log(`${message.author.username}: ${msg}`);
 
     // import buzzes
@@ -12,9 +12,12 @@ function buzz(message){
     // check if word in buzzes
     for (const word of msg.split(' ')) {
         console.log(word);
-        console.log(typeof(word));
-        if (Object.keys(buzzes).includes(word.toLowerCase())){
-            message.channel.send(buzzes[word.toLowerCase()]);
+        if (Object.keys(buzzes).includes(word)){
+            message.channel.send(buzzes[word]);
         }
+    }
+    if (Object.keys(buzzes).includes(msg)){
+        console.log(msg);
+        message.channel.send(buzzes[msg]);
     }
 }
