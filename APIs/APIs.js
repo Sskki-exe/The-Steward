@@ -6,6 +6,7 @@ const sheetID = "1bP6QySg05_XrJQDTfk4Pjp73aL-a-Jm_f31YEw2df8c";
 const {
     GoogleSpreadsheet
 } = require('google-spreadsheet');
+const { prototype } = require("nodemailer/lib/dkim");
 
 var emailOptions = {
     numbers: {}
@@ -35,6 +36,12 @@ function title(str, m) {
 
 function getCell(sheet, coords) {
     return sheet.getCellByA1(coords).formattedValue;
+}
+
+function fromArray(arr) {
+    var obj = {};
+    arr.forEach(item => obj[item[0]] = item[1]);
+    return obj
 }
 
 // Get sheet by title
@@ -124,7 +131,7 @@ async function verify(m) {
             limit = messages.size;
             console.log(`Received ${messages.size} messages`);
             // Convert map to array, use map to reformat
-            testCodes = Object.fromEntries([...messages].map(arr => {
+            testCodes = fromArray([...messages].map(arr => {
                 let id = arr[1].author.id;
                 let content = arr[1].content;
                 //ignore if Steward
