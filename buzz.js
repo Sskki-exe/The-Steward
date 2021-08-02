@@ -14,6 +14,7 @@ function buzz(message){
         console.log(word);
         if (Object.keys(buzzes).includes(word)){
             message.channel.send(buzzes[word]);
+            return
         }
     }
     if (Object.keys(buzzes).includes(msg)){
