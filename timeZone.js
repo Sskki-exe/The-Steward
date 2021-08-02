@@ -4,10 +4,10 @@ let trigger = "(";
 function genTZTable(msg) {
     let output = "```";
 
-    if (!msg.content.split(" ").includes(trigger)) {
+    if (!msg.content.includes(trigger)) {
         return
     }
-    let str = msg.content.split(trigger).pop();
+    let str = msg.content.split(trigger).pop().split(")")[0];
     console.log("\n" + str);
 
     // import timezones
