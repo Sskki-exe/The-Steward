@@ -1,12 +1,13 @@
 let monthNames = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec", false];
+let trigger = "(";
 
 function genTZTable(msg) {
     let output = "```";
 
-    if (!msg.content.split(" ").includes("date")) {
+    if (!msg.content.split(" ").includes(trigger)) {
         return
     }
-    let str = msg.content.split("date").pop();
+    let str = msg.content.split(trigger).pop();
     console.log("\n" + str);
 
     // import timezones
