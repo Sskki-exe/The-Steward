@@ -7,8 +7,8 @@ function genTZTable(msg) {
     if (!msg.content.includes(trigger)) {
         return
     }
-    let str = msg.content.split(trigger).pop().split(")")[0];
-    console.log("\n" + str);
+    let str = msg.content.split(trigger)[1].split(")")[0];
+    console.log("\nInput:" + str);
 
     // import timezones
     const fs = require('fs');
